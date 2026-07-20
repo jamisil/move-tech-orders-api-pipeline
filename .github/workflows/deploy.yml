@@ -10,7 +10,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install fastapi "scalar-fastapi" uvicorn pytest httpx
-      - run: pytest --pass-empty-instances
+      - run: pytest tests/test_main.py
   build-and-deploy:
     needs: test
     runs-on: ubuntu-latest
